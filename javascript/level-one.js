@@ -5,13 +5,44 @@
 // 4- code
 // 5- come up with another solution
 
-// PROBLEM #1
+// PROBLEM #1   Evens array
 
 // Create a function to filter over the array called numbers and return a new array with only the even numbers. Make sure to use the arrow function combined with the filter method.
 // * Should use arrow function
 // * Should use filter method
-// var numbers = "TBD";
+// * Should return all even numbers
 
 var numbers = [1, 2, 3, 4];
 
 var evens = () => numbers.filter(e => e % 2 === 0);
+
+// PROBLEM #2  odd and even arrays
+
+// Create a function using the filter method that separates all even numbers and all odd numbers into separate arrays.
+//* [1, 2, 3, 4, 5, 6] should result in [1, 3, 5] and [2, 4, 6]
+
+var arr = [1, 3, 5, 6, 8, 9, 10, 22, 35]
+    let evens = [];
+    let odds = [];
+
+
+function separate(arr) {
+
+    arr.forEach(e => {
+      if (e % 2) {
+        return odds.push(e);
+      } else {
+        return evens.push(e);
+      }
+    })
+}  
+ // or you can use a ternary as seen below
+ let evens = [];
+ let odds = [];
+
+ function separate(arr) {
+
+    arr.map(e => {
+      return e % 2? odds.push(e) : evens.push(e);
+    })
+  } 
