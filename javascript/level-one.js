@@ -60,3 +60,8 @@ const reverseSeq = (n) => {
     }
     return result;
   };
+
+  // and below are a few other solutions that were new to me
+  const reverseSeq = n => Array.from(Array(n), (_, i) => n - i);
+
+  const reverseSeq = n => Array.from({length: n}, () => n--);
