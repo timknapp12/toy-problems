@@ -65,3 +65,19 @@ const reverseSeq = (n) => {
   const reverseSeq = n => Array.from(Array(n), (_, i) => n - i);
 
   const reverseSeq = n => Array.from({length: n}, () => n--);
+
+  // PROBLEM #4
+// Inside the startWithLetterA function use the built in filter method to filter over the array called strings and return a new array with only the strings that start with a letter "a". Make sure to use the arrow function combined with the filter method.
+// * The strings variable will be changed during tests.
+// * Should use arrow function
+// * Should use filter method
+
+var strings = ['apple', 'banana', 'pear', 'animal', 'ape', 'Angel'];
+
+function sortStr(arr) {
+  return arr.filter(item => item[0] === 'a' || item[0] === 'A'); //there's probably a better
+}                                                               //solution for case insensitive
+
+//the solution below is a bit more streamlined with more ES6 (additional arrow function) and a function expression
+
+var sortStr = arr => arr.filter(item => item[0] === 'a' || item[0] === 'A');
