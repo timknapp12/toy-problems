@@ -66,7 +66,7 @@ const reverseSeq = (n) => {
 
   const reverseSeq = n => Array.from({length: n}, () => n--);
 
-                         // PROBLEM #4
+                         // PROBLEM #4  filter "A's"
 // Inside the startWithLetterA function use the built in filter method to filter over the array called strings and return a new array with only the strings that start with a letter "a". Make sure to use the arrow function combined with the filter method.
 // * The strings variable will be changed during tests.
 // * Should use arrow function
@@ -82,7 +82,7 @@ function sortStr(arr) {
 
 var sortStr = arr => arr.filter(item => item[0] === 'a' || item[0] === 'A');
 
-             //   PROBLEM #5
+             //   PROBLEM #5   map 'Hello x'
  // Inside the formalGreeting function use the built in .map method to map over the array called names and return a new array with "Hello, " appended to the beginning of each name. Make sure to use the arrow function combined with the map method.
 
 // * The names variable will be changed during tests.
@@ -92,12 +92,12 @@ var names = ['Jim', 'Tim', 'Joe', 'Josh']
 
 
 function formalGreeting(arr) {
-  return arr.map(e => "Hello " + e);
+  return arr.map(e => "Hello " + e + '!');
 }
 formalGreeting(names);
 
 // use of arrow functions, a template string, and function expression below:
 
-var formalGreeting = arr => arr.map(e => `Hello ${e}`);
+// var formalGreeting = arr => arr.map(e => `Hello ${e}!`);
 
 formalGreeting(names);
