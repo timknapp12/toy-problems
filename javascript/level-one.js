@@ -98,6 +98,6 @@ formalGreeting(names);
 
 // use of arrow functions, a template string, and function expression below:
 
-// var formalGreeting = arr => arr.map(e => `Hello ${e}!`);
+var formalGreeting = arr => arr.map(e => `Hello ${e}!`);
 
 formalGreeting(names);
