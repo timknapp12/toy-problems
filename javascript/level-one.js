@@ -101,3 +101,42 @@ formalGreeting(names);
 var formalGreeting = arr => arr.map(e => `Hello ${e}!`);
 
 formalGreeting(names);
+
+//               PROBLEM #6
+// I have a cat and a dog.
+
+// I got them at the same time as kitten/puppy. That was humanYears years ago.
+
+// Return their respective ages now as [humanYears,catYears,dogYears]
+
+// NOTES:
+
+// humanYears >= 1
+// Cat Years
+// 15 cat years for first year
+// +9 cat years for second year
+// +4 cat years for each year after that
+// Dog Years
+// 15 dog years for first year
+// +9 dog years for second year
+// +5 dog years for each year after that
+
+var humanYearsCatYearsDogYears = function(humanYears) {
+    // Your code here!
+    var catYears = 0;
+    var dogYears = 0;
+    if (humanYears === 1) {
+      catYears = 15;
+      dogYears = 15;
+    } else if (humanYears === 2) {
+      catYears = 24;
+      dogYears = 24;
+    } else if (humanYears > 2) {
+      catYears = ((humanYears - 2) * 4) + 24;
+      dogYears = ((humanYears - 2) * 5) + 24;
+    }
+    return [humanYears,catYears,dogYears];
+  }
+
+  // below is a very clever way I found on codewars using ternaries
+  const humanYearsCatYearsDogYears = h => [h, (h - 1 ? 16 : 11) + 4 * h, (h - 1 ? 14 : 10) + 5 * h]; //if humanYears is any number greater than 1, then it follows the first option in the ternary and calculates to the correct answer. If the number is 1, then it follows the second option in the ternary
